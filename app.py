@@ -262,7 +262,7 @@ def run_inference(pil_img, model, cfg, fa):
     dct_t   = torch.tensor(dct_map).unsqueeze(0).unsqueeze(0)
     patch_t = torch.tensor(cv2.resize(crop_rgb,(64,64))/255., dtype=torch.float32).permute(2,0,1).unsqueeze(0)
     img_t   = TF(crop_pil).unsqueeze(0)
-    crs_t   = torch.tensor([[crs_val]], dtype=torch.float32)
+    crs_t = torch.tensor([crs_val], dtype=torch.float32)
 
     T      = cfg.get("temperature", 1.0)
     thresh = cfg.get("threshold", 0.5)
