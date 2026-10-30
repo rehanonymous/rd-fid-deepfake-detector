@@ -1,0 +1,11 @@
+torch
+torchvision
+timm
+gradio
+face-alignment
+opencv-python-headless
+matplotlib
+numpy
+Pillow
+gdown
+streamlit
